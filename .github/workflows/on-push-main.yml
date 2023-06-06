@@ -6,6 +6,9 @@ on:
       - main
 
 jobs:
+  build-lint-test:
+    uses: ./.github/workflows/build-lint-test.yml
+    secrets: inherit
   trigger-ci:
     runs-on: ubuntu-22.04
     steps:
